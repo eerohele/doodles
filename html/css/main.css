@@ -1,10 +1,9 @@
 @charset "UTF-8";
 
-h1 {
-  text-decoration: underline;
-}
-
 body {
+  color: #555;
+  font-family: Helvetica, sans-serif;
+  margin: 2em 0;
   text-align: center;
 }
 
@@ -17,14 +16,18 @@ main {
   width: 50%;
 }
 
+h1 {
+  font-weight: 500;
+  margin: 1em 0;
+}
+
 input[type = range] {
-  margin-top: 1em;
+  margin-top: 2em;
   width: 250px;
 }
 
 .progress-text {
   fill: #999;
-  font-family: Helvetica, sans-serif;
 }
 
 .progress-meter {

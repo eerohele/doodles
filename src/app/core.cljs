@@ -45,9 +45,9 @@
                     :stroke-dashoffset (* circumference (- 1 (/ @progress 100)))}}]
 
       [:text.progress-text
-       {:y                  center
-        :x                  center
-        :font-size          (str (/ radius 2) "px")
+       {:y                  "50%"
+        :x                  "50%"
+        :font-size          (str (/ radius 3) "px")
         :alignment-baseline "middle"
         :dominant-baseline  "middle"
         :text-anchor        "middle"} @progress]]]))
@@ -57,6 +57,7 @@
   []
   (fn []
     [:main
+     [:h1 "Progress"]
      [progress-circle 100 progress]
      [slider progress]]))
 
