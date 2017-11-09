@@ -47,8 +47,9 @@
       [:text.progress-text
        {:y                  center
         :x                  center
-        :font-size          (str (/ circumference 2) \%)
+        :font-size          (str (/ radius 2) "px")
         :alignment-baseline "middle"
+        :dominant-baseline  "middle"
         :text-anchor        "middle"} @progress]]]))
 
 
