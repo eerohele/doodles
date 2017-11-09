@@ -32,7 +32,7 @@
       :height  diameter
       :viewBox (str "0 0" " " diameter " " diameter)}
 
-     [:g
+     [:g.progress-group
       [:circle.progress-meter
        {:cx    center
         :cy    center
