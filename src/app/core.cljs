@@ -19,7 +19,7 @@
 (defn progress-circle
   [radius progress]
 
-  (let [center        (* radius 1.1)
+  (let [center        (Math/round (* radius 1.1))
         diameter      (* center 2)
         circumference (* 2 js/Math.PI radius)]
 
