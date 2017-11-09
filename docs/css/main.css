@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+h1 {
+  text-decoration: underline;
+}
+
+body {
+  text-align: center;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: 50%;
+}
+
+input[type = range] {
+  margin-top: 1em;
+  width: 250px;
+}
+
+.progress-text {
+  fill: #999;
+  font-family: Helvetica, sans-serif;
+}
+
+.progress-meter {
+  stroke-width: 10px;
+  stroke: #eee;
+}
+
+.progress-value {
+  stroke-linecap: square;
+  stroke-width: 12px;
+  stroke: #f7a;
+  transition: stroke-dashoffset 300ms ease-out, stroke 300ms ease-in-out;
+}
+
+.progress-value:hover {
+  stroke: #fac;
+}
