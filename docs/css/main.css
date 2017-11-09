@@ -42,6 +42,6 @@ input[type = range] {
   transition: stroke-dashoffset 300ms ease-out, stroke 300ms ease-in-out;
 }
 
-.progress-value:hover {
+.progress-group:hover .progress-value {
   stroke: #fac;
 }
