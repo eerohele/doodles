@@ -5,6 +5,11 @@
 (defonce progress (reagent/atom 42))
 
 
+(defn target-val
+  [event]
+  (.. event -target -value))
+
+
 (defn slider
   [progress]
   [:input
@@ -13,12 +18,11 @@
     :step          1
     :min           0
     :max           100
-    :on-change     #(reset! progress (.. % -target -value))}])
+    :on-change     #(reset! progress (target-val %))}])
 
 
 (defn progress-circle
   [radius progress]
-
   (let [center        (Math/round (* radius 1.1))
         diameter      (* center 2)
         circumference (* 2 js/Math.PI radius)]
@@ -62,7 +66,8 @@
      [slider progress]]))
 
 
-(defn mount-root []
+(defn mount-root
+  []
   (reagent/render [main-panel]
                   (.getElementById js/document "app")))
 
