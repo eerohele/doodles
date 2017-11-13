@@ -13,6 +13,7 @@
                  [onetom/boot-lein-generate   "0.1.3"          :scope "test"]
                  [reagent                     "0.8.0-alpha2"]])
 
+
 (require
   '[boot.lein             :refer [generate]]
   '[adzerk.boot-cljs      :refer [cljs]]
@@ -20,7 +21,9 @@
   '[adzerk.boot-reload    :refer [reload]]
   '[pandeiro.boot-http    :refer [serve]])
 
+
 (generate)
+
 
 (deftask testing
   []
@@ -33,9 +36,10 @@
   (comp (serve :dir "target/")
         (watch)
         (speak)
-        (reload :on-jsload 'app.core/main)
+        (reload :on-jsload 'doodles.core/main)
         (cljs-repl)
         (cljs :source-map true :optimizations :none)))
+
 
 (deftask release
   []

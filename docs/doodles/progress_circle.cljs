@@ -1,8 +1,8 @@
-(ns app.core
+(ns doodles.progress-circle
   (:require [reagent.core :as reagent]))
 
 
-(defonce progress (reagent/atom 42))
+(defonce circle-progress (reagent/atom 42))
 
 
 (defn target-val
@@ -61,17 +61,12 @@
   []
   (fn []
     [:main
-     [:h1 "Progress"]
-     [progress-circle 100 progress]
-     [slider progress]]))
+     [:h1 "Progress Circle"]
+     [progress-circle 100 circle-progress]
+     [slider circle-progress]]))
 
 
 (defn mount-root
   []
   (reagent/render [main-panel]
-                  (.getElementById js/document "app")))
-
-
-(defn main
-  []
-  (mount-root))
+                  (.getElementById js/document "progress-circle")))
